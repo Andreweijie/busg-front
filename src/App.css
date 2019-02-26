@@ -171,6 +171,10 @@ a:hover {
   color: white;
   background-color: #ef233c;
 }
+
+#modal-root div div .bus-stop h2.bus-number .icon {
+  color: white;
+}
 #modal-root div div .bus-stop .refresh-icon {
   color: #ef233c;
 }

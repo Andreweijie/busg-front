@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito|Quicksand|Nunito+Sans|Puritan|Telex|Fredoka+One");
+body {
+  background-color: #edf2f4;
+}
+.App {
+  text-align: left;
+  background-color: #edf2f4;
+}
+.App span {
+  color: #ef233c;
+}
+
+.icon {
+  transform: scale(0.9);
+  color: #ef233c;
+}
+.App .header {
+  font-size: 100px;
+  text-align: center;
+  font-weight: 100;
+  color: #111a2f;
+  font-family: Fredoka One;
+}
+.header2 {
+  font-size: 80px;
+  color: #111a2f;
+}
+.bus-card {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.bus-number {
+  font-weight: 700;
+  background-color: white;
+  color: #ef233c;
+  border-radius: 0.1em;
+  height: 42px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.first-time,
+.second-time {
+  font-weight: 200;
+  text-align: right;
+}
+/*.container {
+  background-color: #ef233c;
+  border-radius: 0.5em;
+  box-shadow: 0rem 0.35rem 3.375rem 0 #ef233c;
+  margin-top: 2em;
+  padding: 2em;
+  padding-left: 50px;
+  color: white;
+}*/
+div.bus-nav nav.navbar.navbar-light.bg-light {
+  background-color: black !important;
+}
+
+a.navbar-brand {
+  color: white !important;
+}
+
+.bus-stop h1 {
+  font-size: 2.5em;
+  word-wrap: break-word !important;
+  margin-right: 1em;
+}
+.bus-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.bus-stop {
+  background-color: #ef233c;
+  border-radius: 0.3em;
+  /*box-shadow: 0rem 0.35rem 3.375rem 0 #ef233c;*/
+  margin-top: 2em;
+  padding: 2em;
+  color: white;
+}
+
+.bus-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search input {
+  height: 50px;
+  border: none;
+  font-size: 0.3em;
+  font-family: Fredoka One;
+}
+
+.search input:focus {
+  box-shadow: 0rem 0.35rem 3.375rem 0 white;
+}
+
+.refresh,
+.refresh:focus {
+  background: transparent;
+  border: none;
+  margin-right: 1em;
+  outline: none;
+}
+
+.refresh-icon {
+  color: white;
+  font-size: 3em;
+}
+.spin {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+p {
+  font-size: 24px;
+  padding: 5px;
+  padding-left: 12px;
+  margin-bottom: 0px !important;
+  background-color: white;
+  font-family: Fredoka One;
+}
+
+p:hover {
+  color: #ef233c;
+}
+
+a,
+a:hover {
+  color: #8d99ae !important;
+  text-decoration: none !important;
+}
+
+.suggestions {
+  padding: 10px;
+  border-radius: 0.05em;
+  position: absolute;
+  width: 55%;
+  background-color: white;
+  box-shadow: 0.625rem 0.75rem 3.375rem 0 rgba(78, 98, 117, 0.3);
+}
+
+.modal-root {
+  z-index: 999;
+  position: relative;
+}
+.directions {
+  display: flex;
+  flex-direction: row;
+}
+#modal-root div div .bus-stop {
+  background-color: white !important;
+  border-radius: 0.5em;
+  box-shadow: 0rem 0.35rem 3.375rem 0 rgba(78, 98, 117, 0.3);
+  margin-top: 2em;
+  padding: 2em;
+  color: #ef233c;
+}
+
+#modal-root div div .bus-stop h2.bus-number {
+  color: white;
+  background-color: #ef233c;
+}
+#modal-root div div .bus-stop .refresh-icon {
+  color: #ef233c;
+}
+
+#btndiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -60px;
+}
+
+#btndiv .icon {
+  transform: scale(2.2);
+}
+.route-card {
+  background-color: white !important;
+  border-radius: 0.5em;
+  box-shadow: 0rem 0.35rem 3.375rem 0 rgba(78, 98, 117, 0.3);
+  margin-top: 2em;
+  padding: 2em;
+  color: #ef233c;
+}
+.routelist {
+  padding: 5px;
+}
+
+.match {
+  color: #ef233c;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

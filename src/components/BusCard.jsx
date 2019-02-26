@@ -11,8 +11,7 @@ class BusCard extends Component {
       "https://busg-232902.appspot.com/api/nearby?userLat=" +
         this.props.userLat +
         "&userLon=" +
-        this.props.userLon,
-      { mode: "no-cors" }
+        this.props.userLon
     )
       .then(response => response.json())
       .then(data => {

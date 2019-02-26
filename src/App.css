@@ -180,7 +180,9 @@ a:hover {
   justify-content: center;
   margin-bottom: -60px;
 }
-
+#modal-pop {
+  z-index: 2;
+}
 #btndiv .icon {
   transform: scale(2.2);
 }

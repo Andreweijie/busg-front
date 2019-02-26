@@ -225,8 +225,12 @@ a:hover {
     align-items: center;
   }
   div.bus-stop {
-    margin-left: 0 !important;
     padding: 1em;
+    width: 100vw;
+  }
+  div.bus-card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .timing {
     display: flex;
@@ -239,12 +243,33 @@ a:hover {
   h2.bus-number {
     font-size: 28px;
     height: 36px;
+    width: 100%;
   }
   .bus-head h1 {
     font-size: 30px;
   }
   h1.header {
     font-size: 80px !important;
+  }
+  .bus-data-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .bus-data {
+    display: flex;
+    flex-direction: column;
+  }
+  .timing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .timing h2 {
+    font-size: 1.1em;
+  }
+  .timing h3 {
+    font-size: 1.1em;
   }
 }
 

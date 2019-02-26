@@ -18,7 +18,9 @@ class BusStop extends Component {
   }
   componentDidMount() {
     this.fetchData();
-    fetch("/api/busname?buscode=" + this.props.stopID)
+    fetch(
+      "https://busg-232902.appspot.com/api/busname?buscode=" + this.props.stopID
+    )
       .then(response => response.json())
       .then(data =>
         this.setState({
@@ -32,7 +34,9 @@ class BusStop extends Component {
     this.setState({
       spin: true
     });
-    fetch("/api/busdata?buscode=" + this.props.stopID)
+    fetch(
+      "https://busg-232902.appspot.com/api/busdata?buscode=" + this.props.stopID
+    )
       .then(response => response.json())
       .then(data =>
         this.setState({

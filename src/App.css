@@ -41,8 +41,11 @@ body {
 
 .first-time,
 .second-time {
-  font-weight: 200;
+  font-weight: 400;
   text-align: right;
+}
+.timing h3 {
+  font-weight: 200;
 }
 /*.container {
   background-color: #ef233c;
@@ -201,5 +204,35 @@ a:hover {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .bus-data h2,
+  .bus-data h3 {
+    font-size: 24px;
+  }
+
+  div.bus-stop {
+    margin-left: 0 !important;
+    padding: 1em;
+  }
+  .timing {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+  }
+  .timing h2 {
+    margin-right: 10px;
+  }
+  h2.bus-number {
+    font-size: 32px;
+    height: 40px;
+  }
+  .bus-head h1 {
+    font-size: 30px;
+  }
+  h1.header {
+    font-size: 80px !important;
   }
 }

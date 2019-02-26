@@ -10,7 +10,8 @@ class Search extends Component {
   ajaxSearch() {
     fetch(
       "https://busg-232902.appspot.com/api/search?searchQuery=" +
-        this.state.query
+        this.state.query,
+      { mode: "no-cors" }
     )
       .then(response => response.json())
       .then(data =>

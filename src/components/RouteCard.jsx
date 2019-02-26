@@ -11,7 +11,8 @@ class RouteCard extends Component {
   componentDidMount() {
     fetch(
       "https://busg-232902.appspot.com/api/routes?serviceno=" +
-        this.props.serviceNo
+        this.props.serviceNo,
+      { mode: "no-cors" }
     )
       .then(response => response.json())
       .then(data =>

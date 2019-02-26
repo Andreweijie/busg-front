@@ -212,7 +212,10 @@ a:hover {
   .bus-data h3 {
     font-size: 24px;
   }
-
+  .bus-data {
+    display: flex;
+    align-items: center;
+  }
   div.bus-stop {
     margin-left: 0 !important;
     padding: 1em;
@@ -226,8 +229,8 @@ a:hover {
     margin-right: 10px;
   }
   h2.bus-number {
-    font-size: 32px;
-    height: 40px;
+    font-size: 28px;
+    height: 36px;
   }
   .bus-head h1 {
     font-size: 30px;

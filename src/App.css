@@ -28,6 +28,7 @@ body {
 .bus-card {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  width: 80vw !important;
 }
 .bus-number {
   font-weight: 700;
@@ -146,6 +147,7 @@ a:hover {
   width: 55%;
   background-color: white;
   box-shadow: 0.625rem 0.75rem 3.375rem 0 rgba(78, 98, 117, 0.3);
+  z-index: 1;
 }
 
 .modal-root {
@@ -237,5 +239,33 @@ a:hover {
   }
   h1.header {
     font-size: 80px !important;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .bus-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .bus-data-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .bus-data {
+    display: flex;
+    flex-direction: column;
+  }
+  .timing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .timing h2 {
+    font-size: 1.5em;
+  }
+  .timing h3 {
+    font-size: 1em;
   }
 }

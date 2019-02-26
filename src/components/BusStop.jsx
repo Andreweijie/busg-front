@@ -65,14 +65,16 @@ class BusStop extends Component {
         </div>
 
         <hr />
-        {this.state.Services.map((e, i) => {
-          return (
-            <div>
-              <BusData key={i} services={e} />
-              <hr />
-            </div>
-          );
-        })}
+        <div className="bus-data-list">
+          {this.state.Services.map((e, i) => {
+            return (
+              <div>
+                <BusData key={i} services={e} />
+                <hr />
+              </div>
+            );
+          })}
+        </div>
         <hr />
       </div>
     );

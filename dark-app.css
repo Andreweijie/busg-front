@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Nunito|Quicksand|Nunito+Sans|Puritan|Telex|Fredoka+One");
+@import url("https://fonts.googleapis.com/css?family=Nunito|Quicksand|Nunito+Sans|Puritan|Telex|Fredoka+One");
 body {
-  background-color: #edf2f4;
+  background-color: #1c222d;
 }
 .App {
   text-align: left;
-  background-color: #edf2f4;
+  background-color: #1c222d;
 }
 .App span {
   color: #ef233c;
@@ -12,13 +12,13 @@ body {
 
 .icon {
   transform: scale(0.9);
-  color: #ef233c;
+  color: white;
 }
 .App .header {
   font-size: 100px;
   text-align: center;
   font-weight: 100;
-  color: #111a2f;
+  color: #edf2f4;
   font-family: Fredoka One;
 }
 .header2 {
@@ -29,27 +29,24 @@ body {
   padding-left: 0 !important;
   padding-right: 0 !important;
   width: 80vw !important;
-  margin-bottom: 24px;
 }
 .bus-number {
   font-weight: 700;
-  background-color: white;
-  color: #ef233c;
+  background-color: #ef233c;
+  color: white;
   border-radius: 0.1em;
   height: 42px;
   padding-left: 5px;
   padding-right: 5px;
-  text-align: center;
 }
 
 .first-time,
 .second-time {
-  font-weight: 500;
-  text-align: left;
+  font-weight: 400;
+  text-align: right;
 }
 .timing h3 {
-  font-weight: 300;
-  font-family: Roboto Mono;
+  font-weight: 200;
 }
 /*.container {
   background-color: #ef233c;
@@ -81,12 +78,12 @@ a.navbar-brand {
   overflow: hidden;
 }
 .bus-stop {
-  background-color: #ef233c;
+  background-color: #11151e;
   border-radius: 0.3em;
   /*box-shadow: 0rem 0.35rem 3.375rem 0 #ef233c;*/
   margin-top: 2em;
   padding: 2em;
-  color: white;
+  color: #ef233c;
 }
 
 .bus-data {
@@ -100,6 +97,7 @@ a.navbar-brand {
   border: none;
   font-size: 0.3em;
   font-family: Fredoka One;
+  background-color: #11151e;
 }
 
 .search input:focus {
@@ -115,7 +113,7 @@ a.navbar-brand {
 }
 
 .refresh-icon {
-  color: white;
+  color: #ef233c;
   font-size: 3em;
 }
 .spin {
@@ -219,6 +217,10 @@ a:hover {
 }
 
 @media only screen and (max-width: 500px) {
+  .bus-data h2,
+  .bus-data h3 {
+    font-size: 24px;
+  }
   .bus-data {
     display: flex;
     align-items: center;
@@ -245,21 +247,15 @@ a:hover {
     width: 100%;
   }
   .bus-head h1 {
-    font-size: 2em;
-    padding-top: 0.8em;
+    font-size: 30px;
   }
   h1.header {
     font-size: 80px !important;
   }
-  #modal-pop .bus-stop {
-    width: 100%;
-    padding: 0.7em !important;
-  }
   .bus-data-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    padding: 0;
+    grid-gap: 20px;
   }
   .bus-data {
     display: flex;
@@ -271,14 +267,11 @@ a:hover {
     justify-content: space-around;
   }
   .timing h2 {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   .timing h3 {
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: start;
-  }
-  div.routelist h4 {
-    font-size: 1.2em;
   }
 }
 
@@ -301,14 +294,11 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /*border: 1px solid white;*/
-    border-radius: 0.2em;
-    padding-top: 12px;
   }
   .timing h2 {
-    font-size: 1.7em;
+    font-size: 1.5em;
   }
   .timing h3 {
-    font-size: 0.7em;
+    font-size: 1em;
   }
 }

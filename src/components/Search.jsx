@@ -8,10 +8,7 @@ class Search extends Component {
   };
 
   ajaxSearch() {
-    fetch(
-      "https://busg-232902.appspot.com/api/search?searchQuery=" +
-        this.state.query
-    )
+    fetch("/api/search?searchQuery=" + this.state.query)
       .then(response => response.json())
       .then(data =>
         this.setState({

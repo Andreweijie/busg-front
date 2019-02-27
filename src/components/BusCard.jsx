@@ -8,7 +8,7 @@ class BusCard extends Component {
 
   componentDidMount() {
     fetch(
-      "https://busg-232902.appspot.com/api/nearby?userLat=" +
+      "/api/nearby?userLat=" +
         this.props.userLat +
         "&userLon=" +
         this.props.userLon

@@ -250,6 +250,7 @@ a:hover {
   }
   h1.header {
     font-size: 80px !important;
+    padding-top: 10px;
   }
   #modal-pop .bus-stop {
     width: 100%;

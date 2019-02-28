@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import BusData from "./BusData";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRedoAlt } from "@fortawesome/free-solid-svg-icons";
+import { faRedoAlt, faHeart } from "@fortawesome/free-solid-svg-icons";
 import ls from "local-storage";
 
 library.add(faRedoAlt);
+library.add(faHeart);
 
 class BusStop extends Component {
   constructor() {

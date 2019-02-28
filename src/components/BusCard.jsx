@@ -27,10 +27,21 @@ class BusCard extends Component {
         let nearbyCode = sortable.map(e => {
           return e[0];
         });
-
-        this.setState({
-          nearbyCode: nearbyCode
-        });
+        if (ls.get("favourites")) {
+          let favsString = ls.get("favourites");
+          let favsData = favsString.split(",");
+          favsData.map(e => {
+            nearbyCode.unshift(e.toString());
+          });
+          let uniq = [...new Set(nearbyCode)];
+          this.setState({
+            nearbyCode: uniq
+          });
+        } else {
+          this.setState({
+            nearbyCode
+          });
+        }
       });
   }
   render() {

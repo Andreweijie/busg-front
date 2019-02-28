@@ -17,6 +17,12 @@ class BusStop extends Component {
     };
   }
   componentDidMount() {
+    if (ls.get("favourites")) {
+      let currFav = ls.get("favourites").split(",");
+      if (currFav.includes(this.props.stopID)) {
+        this.setState({ favourited: true });
+      }
+    }
     this.fetchData();
     fetch(
       "https://busg-232902.appspot.com/api/busname?buscode=" + this.props.stopID
@@ -46,6 +52,28 @@ class BusStop extends Component {
         })
       );
   }
+
+  toggleFav() {
+    if (ls.get("favourites")) {
+      let currentls = ls.get("favourites").split(",");
+      if (this.state.favourited) {
+        let newls = currentls.filter(e => {
+          return e != this.props.stopID;
+        });
+        ls.set("favourites", newls.toString());
+        this.setState({ favourited: false });
+      } else {
+        currentls.push(this.props.stopID);
+        let newls = currentls;
+        ls.set("favourites", newls.toString());
+        this.setState({ favourited: true });
+      }
+    } else {
+      ls.set("favourites", this.props.stopID);
+      this.setState({ favourited: true });
+    }
+  }
+
   render() {
     return (
       <div className="bus-stop">
@@ -54,14 +82,24 @@ class BusStop extends Component {
             {this.state.BusStopName}
             <h4>{this.state.BusStopCode}</h4>
           </h1>
-          <button
-            className={this.state.spin ? "refresh spin" : "refresh"}
-            onClick={() => this.fetchData()}
-            onAnimationStart={() => this.setState({ services: [] })}
-            onAnimationEnd={() => this.setState({ spin: false })}
-          >
-            <FontAwesomeIcon className="refresh-icon" icon="redo-alt" />
-          </button>
+          <div className="fav-box">
+            <button className="refresh" onClick={() => this.toggleFav()}>
+              <FontAwesomeIcon
+                className={
+                  this.state.favourited ? "fav-icon favourited" : "fav-icon"
+                }
+                icon="heart"
+              />
+            </button>
+            <button
+              className={this.state.spin ? "refresh spin" : "refresh"}
+              onClick={() => this.fetchData()}
+              onAnimationStart={() => this.setState({ services: [] })}
+              onAnimationEnd={() => this.setState({ spin: false })}
+            >
+              <FontAwesomeIcon className="refresh-icon" icon="redo-alt" />
+            </button>
+          </div>
         </div>
 
         <hr />

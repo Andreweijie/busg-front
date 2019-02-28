@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BusStop from "./BusStop";
+import ls from "local-storage";
 
 class BusCard extends Component {
   state = {

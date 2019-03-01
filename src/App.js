@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import BusCard from "./components/BusCard";
 import Search from "./components/Search";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -35,12 +35,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="header">
+        <h1 className="header" id="header">
           <FontAwesomeIcon className="icon" icon="bus" />
           BU<span>SG</span>
         </h1>
         <hr />
-        <h2 className="header2">
+        <h2 className="search-header">
           <Search />
         </h2>
         {this.checkLoc()}

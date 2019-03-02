@@ -79,6 +79,11 @@ body {
         /*box-shadow: 0rem 0.35rem 3.375rem 0 #ef233c;*/
         padding: 2em;
         color: white;
+        opacity: 1;
+        animation-name: fadeIn;
+        animation-duration: 800ms;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
         .bus-head {
           display: flex;
           flex-direction: row;
@@ -170,6 +175,7 @@ body {
           margin-top: 2em;
           padding: 4em;
           color: #ef233c;
+          opacity: 1;
           .bus-head {
             display: flex;
             flex-direction: row;
@@ -262,6 +268,18 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-top: 80px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .bus-data {
     display: flex;
@@ -287,11 +305,12 @@ body {
   }
   h2.bus-number {
     font-size: 28px;
-    height: 36px;
-    width: 100%;
+    height: 40px;
+    width: 6em;
+    text-align: center;
   }
   .bus-head h1 {
-    font-size: 2em;
+    font-size: 6vw !important;
     padding-top: 0.8em;
   }
   h1.header {

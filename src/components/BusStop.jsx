@@ -78,7 +78,7 @@ class BusStop extends Component {
 
   render() {
     return (
-      <div className="bus-stop">
+      <div className="bus-stop fade">
         <div className="bus-head">
           <h1>
             {this.state.BusStopName}

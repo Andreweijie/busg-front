@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Nunito|Quicksand|Nunito+Sans|Puritan|Telex|Fredoka+One");
 body {
-  background-color: #edf2f4;
+  background-color: #fff;
   .App {
     text-align: left;
-    background-color: #edf2f4;
+    background-color: #fff;
     .header {
       font-size: 100px;
       text-align: center;
@@ -23,6 +23,7 @@ body {
       color: #111a2f;
       .search {
         input {
+          box-shadow: 0.625rem 0.75rem 3.375rem 0 rgba(78, 98, 117, 0.3);
           height: 50px;
           border: none;
           font-size: 0.3em;
@@ -72,13 +73,14 @@ body {
       padding-top: 24px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 40px;
+      grid-gap: 50px;
       .bus-stop {
-        background-color: #ef233c;
+        box-shadow: 0.625rem 0.75rem 3.375rem 0 rgba(78, 98, 117, 0.3);
+        background-color: #fff;
         border-radius: 0.3em;
         /*box-shadow: 0rem 0.35rem 3.375rem 0 #ef233c;*/
         padding: 2em;
-        color: white;
+        color: #404247;
         opacity: 1;
         animation-name: fadeIn;
         animation-duration: 800ms;
@@ -90,6 +92,7 @@ body {
           align-items: center;
           justify-content: space-between;
           overflow: hidden;
+          margin-bottom: 1em;
           h1 {
             font-size: 2vw;
             word-wrap: break-word !important;
@@ -105,14 +108,15 @@ body {
               margin-right: 1em;
               outline: none;
               .fav-icon {
-                color: white;
+                color: #ef233c;
                 font-size: 2.7em;
+                opacity: 0.7;
               }
               .favourited {
                 color: #fe7bbb;
               }
               .refresh-icon {
-                color: white;
+                color: #404247;
                 font-size: 2.7em;
               }
             }
@@ -131,15 +135,19 @@ body {
             }
             .bus-number {
               font-weight: 700;
-              background-color: white;
-              color: #ef233c;
+              background-color: #edf2f4;
+              color: #404247;
               border-radius: 0.1em;
               height: 42px;
               padding-left: 5px;
               padding-right: 5px;
               text-align: center;
+              .icon {
+                color: #ef233c;
+              }
             }
             .timing {
+              justify-content: space-between;
               .first-time,
               .second-time {
                 font-weight: 500;
@@ -174,7 +182,7 @@ body {
           box-shadow: 0rem 0.35rem 3.375rem 0 rgba(78, 98, 117, 0.3);
           margin-top: 2em;
           padding: 4em;
-          color: #ef233c;
+          color: #404247;
           opacity: 1;
           .bus-head {
             display: flex;
@@ -192,7 +200,7 @@ body {
                 outline: none;
               }
               .refresh-icon {
-                color: #ef233c;
+                color: #404247;
                 font-size: 2.7em;
               }
               .fav-icon {
@@ -211,12 +219,17 @@ body {
             div {
               .bus-data {
                 .bus-number {
-                  color: white;
-                  background-color: #ef233c;
-                  text-align: center;
                   border-radius: 0.1em;
+                  font-weight: 700;
+                  background-color: #edf2f4;
+                  color: #404247;
+                  border-radius: 0.1em;
+                  height: 42px;
+                  padding-left: 5px;
+                  padding-right: 5px;
+                  text-align: center;
                   .icon {
-                    color: white;
+                    color: #ef233c;
                   }
                 }
               }
@@ -241,7 +254,12 @@ body {
   box-shadow: 0rem 0.35rem 3.375rem 0 rgba(78, 98, 117, 0.3);
   margin-top: 2em;
   padding: 2em;
-  color: #ef233c;
+  color: #404247;
+  h1 {
+    .icon {
+      color: #ef233c;
+    }
+  }
 
   .routelist {
     padding: 5px;
@@ -288,7 +306,7 @@ body {
   div.bus-stop {
     padding: 1em !important;
     width: 100vw;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
   div.bus-card {
     margin-left: 0 !important;
@@ -305,11 +323,11 @@ body {
     margin-right: 10px;
   }
   h2.bus-number {
+    padding-top: 0.1em;
     font-size: 28px;
     height: 40px;
     width: 6em;
     text-align: center;
-    padding-top: 0.1em;
   }
   .bus-head h1 {
     font-size: 6vw !important;

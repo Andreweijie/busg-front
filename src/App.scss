@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Nunito|Quicksand|Nunito+Sans|Puritan|Telex|Fredoka+One");
 body {
-  background-color: #fff;
+  background-color: #edf2f4;
   .App {
     text-align: left;
-    background-color: #fff;
+    background-color: #edf2f4;
     .header {
       font-size: 100px;
       text-align: center;
@@ -23,7 +23,7 @@ body {
       color: #111a2f;
       .search {
         input {
-          box-shadow: 0.625rem 0.75rem 3.375rem 0 rgba(78, 98, 117, 0.3);
+          box-shadow: 0.625rem 0.75rem 3.375rem 0 #edf2f4;
           height: 50px;
           border: none;
           font-size: 0.3em;
@@ -75,7 +75,7 @@ body {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 50px;
       .bus-stop {
-        box-shadow: 0.625rem 0.75rem 3.375rem 0 rgba(78, 98, 117, 0.3);
+        box-shadow: 0.625rem 0.75rem 3.375rem 0 #edf2f4;
         background-color: #fff;
         border-radius: 0.3em;
         /*box-shadow: 0rem 0.35rem 3.375rem 0 #ef233c;*/
@@ -307,6 +307,7 @@ body {
     padding: 1em !important;
     width: 100vw;
     margin-bottom: 16px;
+    box-shadow: none !important;
   }
   div.bus-card {
     margin-left: 0 !important;

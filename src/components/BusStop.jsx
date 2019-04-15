@@ -49,7 +49,11 @@ class BusStop extends Component {
       .then(data =>
         this.setState({
           BusStopCode: data.BusStopCode,
-          Services: data.Services
+          Services: data.Services.sort((a, b) => {
+            let serviceNumberA = parseInt(a.ServiceNo, 10);
+            let serviceNumberB = parseInt(b.ServiceNo, 10);
+            return serviceNumberA - serviceNumberB;
+          })
           //BusStopName: this.getName(this.props.stopID)
         })
       );

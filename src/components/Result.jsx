@@ -6,6 +6,13 @@ class Result extends Component {
   state = {
     showModal: false
   };
+  componentDidMount() {
+    if (this.props.result.indexOf(" ") >= 0) {
+      let stopCode = this.props.result.split(" ");
+      stopCode = stopCode[0];
+      this.setState({ stopCode });
+    }
+  }
   toggleModal = () => {
     this.setState({
       showModal: !this.state.showModal
@@ -22,8 +29,8 @@ class Result extends Component {
         </p>
         {this.state.showModal ? (
           <Modal open={this.state.showModal} onClose={this.toggleModal}>
-            {this.props.result.length == 5 ? (
-              <BusStop stopID={this.props.result} />
+            {this.props.result.indexOf(" ") >= 0 ? (
+              <BusStop stopID={this.state.stopCode} />
             ) : (
               <Routes serviceNo={this.props.result} />
             )}
